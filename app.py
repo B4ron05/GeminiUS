@@ -441,25 +441,6 @@ with st.sidebar:
     yf_ticker = ASSET_MAPPING[selected_asset]["yf"]
     opt_ticker = ASSET_MAPPING[selected_asset]["opt"]
     
-    # --- NEW: MANUAL FORECAST EDITOR ---
-    st.divider()
-    with st.expander("📝 Edit Manual Forecasts"):
-        st.caption("Update your baseline estimates. Changes save locally to JSON.")
-        
-        current_forecasts = forecast_manager.load_forecasts()
-        new_forecasts = {}
-        
-        with st.form("forecast_editor_form"):
-            for metric, current_val in current_forecasts.items():
-                new_forecasts[metric] = st.number_input(f"{metric} Est:", value=float(current_val), step=0.1)
-            
-            save_clicked = st.form_submit_button("💾 Save Forecasts to Disk")
-            
-            if save_clicked:
-                forecast_manager.save_forecasts(new_forecasts)
-                st.success("Locked in! Click 'Apply Settings' above to refresh the dashboard.")
-
-
 # --- MAIN APP ROUTING (TABS) ---
 if fred_key: # --- NO MORE FINNHUB GATEKEEPER ---
     tab_surprises, tab_momentum, tab_charts = st.tabs([
