@@ -413,7 +413,7 @@ with st.sidebar:
             "SILVER": {"cftc": "084691", "yf": "SI=F", "opt": "SLV"}, 
             "CRUDE OIL": {"cftc": "067651", "yf": "CL=F", "opt": "USO"}, 
             "US DOLLAR INDEX": {"cftc": "098662", "yf": "DX-Y.NYB", "opt": "UUP"}, 
-            "10-YR TREASURY": {"cftc": "043602", "yf": "^TNX", "opt": "IEF"},
+            "10-YR TREASURY": {"cftc": "043602", "yf": "ZN=F", "opt": "IEF"},
             "RUSSELL 2000": {"cftc": "239742", "yf": "^RUT", "opt": "IWM"},
 
     # --- SPDR Sector ETFs: no CFTC futures contract exists for these,
