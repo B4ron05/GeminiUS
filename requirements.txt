@@ -4,3 +4,4 @@ requests
 yfinance
 altair
 tenacity
+fear-and-greed
