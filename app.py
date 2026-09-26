@@ -396,7 +396,7 @@ def get_cached_cot_history(ticker, weeks_to_fetch): return cot_data.fetch_cot_hi
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.header("🧠 Quant Brain Settings")
+    st.header("Settings")
     with st.form("api_settings_form"):
         st.subheader("API Connections")
         
